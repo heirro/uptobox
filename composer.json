@@ -1,6 +1,7 @@
 {
     "require": {
         "guzzlehttp/guzzle": "~6.0",
-        "symfony/dom-crawler": "^5.0"
+        "symfony/dom-crawler": "^5.0",
+        "symfony/css-selector": "^5.0"
     }
 }
