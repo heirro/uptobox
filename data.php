@@ -1,6 +1,6 @@
 <?php
 header('Content-Type: application/json');
-require __DIR__.'/vendor/autoload.php';
+require __DIR__.'/../vendor/autoload.php';
 use GuzzleHttp\Client;
 use Symfony\Component\DomCrawler\Crawler;
 $files = $_GET['get'];
