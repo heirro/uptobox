@@ -19,6 +19,6 @@ $first = $crawler->filter('script')->parents()->getNode(1)->nodeValue;
 preg_match('/filename = \'(.*?)\'/', $first, $filename);
 preg_match('/poster: \'(.*?)\'/', $first, $poster);
 ?>
-
-
-<?php if (is_null($filename[1]) && is_null($poster[1])){    $arr = array(    "status" => 404,    "msg" => "file not found or file not support uptostream",    "Credit" => "https://github.com/heirro/uptobox");}else if(empty($files)){$arr = array(    "status" => 400,    "msg" => "missing parameter",    "Credit" => "https://github.com/heirro/uptobox");}else if(isset($files)){$arr = array(    "metaData" => array(        "fileName" => $filename[1],        "thumbImg" => $poster[1],    ),    "Credit" => "https://github.com/heirro/uptobox");}echo json_encode($arr, JSON_PRETTY_PRINT);?>
+<?php
+echo eval(base64_decode("aWYgKGlzX251bGwoJGZpbGVuYW1lWzFdKSAmJiBpc19udWxsKCRwb3N0ZXJbMV0pKXsgICAgJGFyciA9IGFycmF5KCAgICAic3RhdHVzIiA9PiA0MDQsICAgICJtc2ciID0+ICJmaWxlIG5vdCBmb3VuZCBvciBmaWxlIG5vdCBzdXBwb3J0IHVwdG9zdHJlYW0iLCAgICAiQ3JlZGl0IiA9PiAiaHR0cHM6Ly9naXRodWIuY29tL2hlaXJyby91cHRvYm94Iik7fWVsc2UgaWYoZW1wdHkoJGZpbGVzKSl7JGFyciA9IGFycmF5KCAgICAic3RhdHVzIiA9PiA0MDAsICAgICJtc2ciID0+ICJtaXNzaW5nIHBhcmFtZXRlciIsICAgICJDcmVkaXQiID0+ICJodHRwczovL2dpdGh1Yi5jb20vaGVpcnJvL3VwdG9ib3giKTt9ZWxzZSBpZihpc3NldCgkZmlsZXMpKXskYXJyID0gYXJyYXkoICAgICJtZXRhRGF0YSIgPT4gYXJyYXkoICAgICAgICAiZmlsZU5hbWUiID0+ICRmaWxlbmFtZVsxXSwgICAgICAgICJ0aHVtYkltZyIgPT4gJHBvc3RlclsxXSwgICAgKSwgICAgIkNyZWRpdCIgPT4gImh0dHBzOi8vZ2l0aHViLmNvbS9oZWlycm8vdXB0b2JveCIpO31lY2hvIGpzb25fZW5jb2RlKCRhcnIsIEpTT05fUFJFVFRZX1BSSU5UKTs="));
+?>
