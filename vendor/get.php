@@ -1,5 +1,5 @@
 <?php
-require __DIR__.'/autoload.php';
+require __DIR__.'autoload.php';
 use GuzzleHttp\Client;
 use Symfony\Component\DomCrawler\Crawler;
 $files = $_GET['get'];
